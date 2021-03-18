@@ -1,0 +1,31 @@
+{
+  "name": "swift-qa",
+  "version": "1.0.0",
+  "description": "Repo for Team Swift SDC HR",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HRrfp51-Team-Swift/Swift-QA.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HRrfp51-Team-Swift/Swift-QA/issues"
+  },
+  "homepage": "https://github.com/HRrfp51-Team-Swift/Swift-QA#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg": "^8.5.1",
+    "postgres": "^1.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.22.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "nodemon": "^2.0.7"
+  }
+}
