@@ -8,7 +8,7 @@ app.use(express.json());
 // ------------ GETS ------------
 
 app.get('/', (req, res) => {
-  db.getUsers((err, data) => {
+  db.getQuestion((err, data) => {
     if (err) {
       // eslint-disable-next-line no-console
       console.error(err);

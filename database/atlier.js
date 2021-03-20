@@ -1,25 +1,28 @@
-const postgres = require('postgres');
+/* eslint-disable no-console */
+const { Pool } = require('pg');
 
-const sql = postgres({
+const pool = new Pool({
   user: 'me',
   host: 'localhost',
-  database: 'testing',
+  database: 'qadb',
   password: 'password',
-  port: 3005,
+  port: 5432,
 });
 
-const getUsers = (cb) => {
-  pool.query('SELECT * FROM users;', (err, data) => {
+console.log('Successful connection to the database');
+
+const getQuestion = (cb) => {
+  pool.query('SELECT * FROM questions WHERE product_id = $1;', [1], (err, res) => {
     if (err) {
-      // eslint-disable-next-line no-console
       console.error(err);
       cb(err);
     } else {
-      cb(null, data);
+      const result = res.rows;
+      cb(null, result);
     }
   });
 };
 
 module.exports = {
-  getUsers,
+  getQuestion,
 };
